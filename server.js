@@ -13,6 +13,7 @@ const User = require('./user'),
 
   app.use(bodyParser.urlencoded({ extended: false }));
   app.use(bodyParser.json());
+  app.use(express.static(__dirname + '/public'));
 
   // create a new user
   app.post('/users', (req, res) => {
